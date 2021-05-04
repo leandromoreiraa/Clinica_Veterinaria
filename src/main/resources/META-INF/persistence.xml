@@ -1,0 +1,45 @@
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence
+             http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd"
+             version="2.1">
+
+    <persistence-unit name="qintess">
+        <description>
+            Unidade de persistencia do projeto qintess orm - Clinica Veterinaria
+        </description>
+
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+
+        <properties>
+            <property name="javax.persistence.jdbc.driver"
+                      value="org.postgresql.Driver" />
+
+            <property name="javax.persistence.jdbc.url"
+                      value="jdbc:postgresql://localhost:5432/db_clinica_veterinaria" />
+
+            <property name="javax.persistence.jdbc.user"
+                      value="postgres" />
+
+            <property name="javax.persistence.jdbc.password"
+                      value="admin" />
+
+            <property name="hibernate.show_sql"
+                      value="true" />
+                      
+            
+            <!--<property name="hibernate.format_sql" value="true" /> -->
+            
+
+            <property name="hibernate.hbm2ddl.auto"
+                      value="update" />
+                      
+ <!-- validate: validar o schema, não faz mudanças no banco de dados.
+update: faz update o schema.
+create: cria o schema, destruindo dados anteriores.
+create-drop: drop o schema quando ao terminar a sessão. -->
+        </properties>
+
+    </persistence-unit>
+
+</persistence>
